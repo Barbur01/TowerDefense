@@ -18,6 +18,7 @@ public class UI : MonoBehaviour
     {
         Player.OnCoinsChanged += SetCoins;
         Player.OnTowerUpgradeAvailable += ShowUpgradeTowerButton;
+        Player.OnCancelBuildTowerEvent += ShowCreateTowerButton;
         Tower.OnTowerCreated += ShowCreateTowerButton;
         Tower.OnTowerLocating += ShowCancelTowerButton;
     }
@@ -26,6 +27,7 @@ public class UI : MonoBehaviour
     {
         Player.OnCoinsChanged -= SetCoins;
         Player.OnTowerUpgradeAvailable -= ShowUpgradeTowerButton;
+        Player.OnCancelBuildTowerEvent -= ShowCreateTowerButton;
         Tower.OnTowerCreated -= ShowCreateTowerButton;
         Tower.OnTowerLocating -= ShowCancelTowerButton;
     }
